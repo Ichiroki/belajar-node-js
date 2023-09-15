@@ -1,0 +1,72 @@
+- NodeJS adalah sebuah JavaScript runtime yang dibangun menggunakan mesin JavaScript yang bernama V8 yang dimiliki oleh Google Chrome
+
+- Apa itu runtime ? Runtime adalah dimana kita menjalankan / mengeksekusi code kita
+
+- NodeJS dibuat oleh Ryan Dahl pada tahun 2009, yang dimana ia ingin membuat web server menggunakan event loop, tidak menggunakan thread. Ia membuat NodeJS dengan bantuan V8 Engine JavaScript yang dimiliki oleh Google Chrome. yang dimana V8 Engine JavaScript hanya berjalan di dalam Browser, Ryan membuat V8 Engine JavaScript tersebut dapat berjalan di Operasi Sistem
+
+- NodeJS dapat melakukan pengaturan memori, menjalankan I/O, mengakses File System, dan melakukan aktivitas Network
+
+- Karakteristik NodeJS
+   1. Asynchronous & Event Driven,
+   2. Non-Blocking,
+   3. Single Threaded but Highly Scalable,
+   4. Cross Platform,
+   5. MIT License (Open Source),
+   6. NPM
+
+- Fitur Utama NodeJS
+   1. dapat mengakses File System,
+   2. Buffer -> ketika kita mengelola binary dari File-nya,
+   3. Http & Https,
+   4. REPL (Read, Evaluate, Print, Loop) -> untuk mengeksekusi program kita dari CLI,
+   5. Console,
+   6. Crypto,
+   7. Zlib
+
+Baca selengkapnya di : nodejs.org/dist/latest-v14.x/docs/api
+
+NodeJS & PHP :
+
+
+- PHP dibuat pada tahun 1994
+- NodeJS dibuat pada tahun 2009
+
+- PHP menggunakan engine yang bernama Zend Engine
+- NodeJS mengunakan engine yang bernama Google's V8 Engine
+
+- PHP berkarakteristik Multi-Thread, Synchronous, Blocking. Pada saat ia mengerjakan satu hal, ia harus menunggu hal tersebut selesai lalu lanjut ke hal yang berikutnya
+- NodeJS berkarakteristik Single-Thread, Asynchronous, Non-Blocking. Pada saat ia mengerjakan satu hal, ia tidak harus menunggu hal tersebut selesai, namun lanjut ke hal yang berikutnya
+
+- PHP menggunakan Web Server yang menggunakan Apache / IIS
+- NodeJS menggunakan Web Server yang berjalan di runtime-nya sendiri
+
+- PHP memiliki Package Manager yang bernama Composer
+- NodeJS memiliki Package Manager yang bernama NPM
+
+NodeJS cocok untuk
+   - Dynamic Single Page Application (SPA),
+   - Realtime App (Chat, Multiplayer),
+   - API,
+   - Streaming App,
+   - Microservices,
+   - Command Line Tool,
+   - MERN, MEAN, MEVN,
+
+Pre Requisite
+   - Javascript Dasar
+   - Javascript Lanjutan (Modern JS / ES6)
+
+Command Line NodeJS
+
+ketik "node" di git bash atau cmd lainnya. Command Line NodeJS dapat membuat variabel, function, dll. Namun hanya tersimpan di dalam memori NodeJS.
+
+Command penting :
+
+- node -> untuk mengakses CLI yang dimiliki oleh NodeJS
+- .global -> untuk mengakses variabel global
+- .load -> untuk melihat isi file
+- .save -> untuk menyimpan dan menulis suatu codingan ke suatu file
+- .break -> untuk keluar dari multi-line code
+- .editor -> untuk melakukan codingan multi-line (hampir sama seperti vi)
+- cat -> untuk melihat isi dari file (sama seperti .load namun diluar dari CLI NodeJS)
+- vi -> untuk melakukan codingan multi-line
