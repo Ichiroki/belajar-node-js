@@ -1,0 +1,25 @@
+{
+  "name": "lesson8",
+  "version": "1.0.0",
+  "description": "Belajar node lesson 8",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "check": "ls",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ichiroki/belajar-node-js.git"
+  },
+  "author": "Ichiroki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ichiroki/belajar-node-js/issues"
+  },
+  "homepage": "https://github.com/Ichiroki/belajar-node-js#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "validator": "^13.5.2"
+  }
+}
