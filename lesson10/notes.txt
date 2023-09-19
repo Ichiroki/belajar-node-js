@@ -87,3 +87,9 @@ Fungsi require mencari modul dengan urutan sebagai berikut :
    - Core Modules
    - File atau direktori ("./" atau "/" atau "../")
    - Folder "node_modules"
+
+Node Modules yang dipakai hari ini :
+- fs (File System),
+- rl (Readline),
+- validator,
+- chalk,
