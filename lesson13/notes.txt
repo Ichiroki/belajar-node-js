@@ -94,3 +94,18 @@ Node Modules yang dipakai hari ini :
 - validator,
 - chalk,
 - yargs
+
+Node.js punya sebuah built-in module yang bernama HTTP, yang mengizinkan Node.js untuk transfer data melewati HTTP
+
+HTTP module dapat membuat sebuah server HTTP yang berinteraksi ke port server dan memberikan respons balik ke klien
+
+function penting : 
+createServer(function, (req, res) => {}) => function untuk membuat sebuah server HTTP
+writeHead() => function untuk mengembalikan status code (200 = sukses, 404 = tidak ditemukan), dan respons
+
+contoh :
+http.createServer((req, res) => {
+   res.writeHead(200, {
+      'Content-Type' : 'text/html'
+   }) -> server mengembalikan status code dan response yang berupa objek
+}).listen(3000) -> objek server berinteraksi dengan port 3000
