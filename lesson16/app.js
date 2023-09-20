@@ -1,13 +1,26 @@
 const express = require('express')
 const compression = require('compression')
 const expressLayouts = require('express-ejs-layouts')
+const morgan = require('morgan')
+
 const app = express()
 const port = 3000
 
 // EJS
 app.set('view engine', 'ejs')
 app.use(compression())
+
+// Third party middleware
 app.use(expressLayouts)
+app.use(morgan('dev'))
+
+// Built-in middleware
+app.use(express.static('public'))
+
+// Application level middleware
+app.use((req, res, next) => {
+   next();
+})
 
 app.get('/', (req, res) => {
    res.render('index', {
@@ -26,7 +39,7 @@ app.get('/about', (req, res) => {
       layout: 'layouts/main',})
 })
 
-app.get('/contact', (req, res) => {
+app.get('/contact', (req, res, next) => {
    try {
    const contact = [
       {
@@ -46,8 +59,9 @@ app.get('/contact', (req, res) => {
       contact}
       )
    } catch(err) {
-      res.write(err);
+      res.send(err);
    }
+   next();
 })
 
 app.get('/product/:id', (req, res) => {

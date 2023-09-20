@@ -138,3 +138,21 @@ get() -> untuk meregistrasi url dan mengembalikan halaman
 write() -> untuk render string yang akan ditampilkan. contoh : "Hello World"
 use() -> untuk melakukan routing yang menggunakan middleware, ini digunakan ketika ingin membuat halaman erorr
 listen() -> untuk melakukan inisialisasi server yang menggunakan custom port
+
+Middleware adalah sebuah software yang menghubungkan software atau aplikasi lain.
+
+Middleware dapat digunakan dalam :
+   - Database
+   - Web Server
+   - Game Engine
+   - Web Application
+
+Fungsi Middleware di dalam ExpressJS yaitu sebuah fungsi yang memiliki akses ke object request (req), object response (res), dan fungsi middleware berikutnya (next)
+
+Fungsi Middleware di dalam ExpressJS memiliki berbagai macam jenis, yaitu :
+   - User-defined middleware
+      - Application-level middleware
+      - Router-level middleware
+      - Error-handling middleware
+   - Built-in middleware
+   - Third-party middleware
