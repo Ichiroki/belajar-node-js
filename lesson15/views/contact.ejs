@@ -1,0 +1,11 @@
+<h4>Daftar Kontak</h4>
+<% if (contact.length == 0) { %>
+  <p><%= "Tidak ada kontak yang tersedia" %></p>
+<% } else { %>
+  <ul>
+    <% contact.forEach((c) => { %>
+      <li><%= c.nama %></li>
+      <li><%= c.umur %></li>
+    <% }) %>
+  </ul>
+<% } %>

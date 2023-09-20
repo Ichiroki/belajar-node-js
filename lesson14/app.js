@@ -10,11 +10,11 @@ app.get('/about', (req, res) => {
    res.sendFile('./about.html', {root: __dirname})
 })
 
-app.use('/contact', (req, res) => {
+app.get('/contact', (req, res) => {
    res.sendFile('./contact.html', {root: __dirname})
 })
 
-app.use('/product/:id', (req, res) => {
+app.get('/product/:id', (req, res) => {
    res.send(`Product ID :  ${req.params.id} <br> Category ID : ${req.query.category}`)
 })
 
