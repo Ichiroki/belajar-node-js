@@ -1,7 +1,6 @@
 const express = require('express')
 const compression = require('compression')
 const expressLayouts = require('express-ejs-layouts')
-const morgan = require('morgan')
 
 const app = express()
 const port = 3000
@@ -12,15 +11,9 @@ app.use(compression())
 
 // Third party middleware
 app.use(expressLayouts)
-app.use(morgan('dev'))
 
 // Built-in middleware
 app.use(express.static('public'))
-
-// Application level middleware
-app.use((req, res, next) => {
-   next();
-})
 
 app.get('/', (req, res) => {
    res.render('index', {
