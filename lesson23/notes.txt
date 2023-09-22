@@ -1,0 +1,203 @@
+- NodeJS adalah sebuah JavaScript runtime yang dibangun menggunakan mesin JavaScript yang bernama V8 yang dimiliki oleh Google Chrome
+
+- Apa itu runtime ? Runtime adalah dimana kita menjalankan / mengeksekusi code kita
+
+- NodeJS dibuat oleh Ryan Dahl pada tahun 2009, yang dimana ia ingin membuat web server menggunakan event loop, tidak menggunakan thread. Ia membuat NodeJS dengan bantuan V8 Engine JavaScript yang dimiliki oleh Google Chrome. yang dimana V8 Engine JavaScript hanya berjalan di dalam Browser, Ryan membuat V8 Engine JavaScript tersebut dapat berjalan di Operasi Sistem
+
+- NodeJS dapat melakukan pengaturan memori, menjalankan I/O, mengakses File System, dan melakukan aktivitas Network
+
+- Karakteristik NodeJS
+   1. Asynchronous & Event Driven,
+   2. Non-Blocking,
+   3. Single Threaded but Highly Scalable,
+   4. Cross Platform,
+   5. MIT License (Open Source),
+   6. NPM
+
+- Fitur Utama NodeJS
+   1. dapat mengakses File System,
+   2. Buffer -> ketika kita mengelola binary dari File-nya,
+   3. Http & Https,
+   4. REPL (Read, Evaluate, Print, Loop) -> untuk mengeksekusi program kita dari CLI,
+   5. Console,
+   6. Crypto,
+   7. Zlib
+
+Baca selengkapnya di : nodejs.org/dist/latest-v14.x/docs/api
+
+NodeJS & PHP :
+
+
+- PHP dibuat pada tahun 1994
+- NodeJS dibuat pada tahun 2009
+
+- PHP menggunakan engine yang bernama Zend Engine
+- NodeJS mengunakan engine yang bernama Google's V8 Engine
+
+- PHP berkarakteristik Multi-Thread, Synchronous, Blocking. Pada saat ia mengerjakan satu hal, ia harus menunggu hal tersebut selesai lalu lanjut ke hal yang berikutnya
+- NodeJS berkarakteristik Single-Thread, Asynchronous, Non-Blocking. Pada saat ia mengerjakan satu hal, ia tidak harus menunggu hal tersebut selesai, namun lanjut ke hal yang berikutnya
+
+- PHP menggunakan Web Server yang menggunakan Apache / IIS
+- NodeJS menggunakan Web Server yang berjalan di runtime-nya sendiri
+
+- PHP memiliki Package Manager yang bernama Composer
+- NodeJS memiliki Package Manager yang bernama NPM
+
+NodeJS cocok untuk
+   - Dynamic Single Page Application (SPA),
+   - Realtime App (Chat, Multiplayer),
+   - API,
+   - Streaming App,
+   - Microservices,
+   - Command Line Tool,
+   - MERN, MEAN, MEVN,
+
+Pre Requisite
+   - Javascript Dasar
+   - Javascript Lanjutan (Modern JS / ES6)
+
+Command Line NodeJS
+
+ketik "node" di git bash atau cmd lainnya. Command Line NodeJS dapat membuat variabel, function, dll. Namun hanya tersimpan di dalam memori NodeJS.
+
+Command penting :
+
+- node -> untuk mengakses CLI yang dimiliki oleh NodeJS
+- .global -> untuk mengakses variabel global
+- .load -> untuk melihat isi file
+- .save -> untuk menyimpan dan menulis suatu codingan ke suatu file
+- .break -> untuk keluar dari multi-line code
+- .editor -> untuk melakukan codingan multi-line (hampir sama seperti vi)
+- cat -> untuk melihat isi dari file (sama seperti .load namun diluar dari CLI NodeJS)
+- vi -> untuk melakukan codingan multi-line
+
+Modules adalah sekumpulan code yang dapat digunakan kembali, dengan antarmuka yang terdefinisi
+
+Node Modules adalah Fungsionalitas yang simpel ataupun kompleks yang tersimpan di dalam sebuah file JavaScript, yang dapat digunakana kembali pada aplikasi NodeJS.
+
+Setiap modul di dalam NodeJS memiliki konteks-nya masing-masing, tidak bisa saling tercampur dengan modul lain pada lingkup global.
+
+Jenis NodeJS Modules :
+   - Core Modules -> Modul yang sudah ada di dalam corenya NodeJS
+   - Local Modules -> Modul yang dibuat langsung oleh scripter
+   - Third Party Modules -> Modul yang sudah dibuat oleh orang lain
+
+require()
+Fungsi require mencari modul dengan urutan sebagai berikut :
+   - Core Modules
+   - File atau direktori ("./" atau "/" atau "../")
+   - Folder "node_modules"
+
+Node Modules yang dipakai hari ini :
+- fs (File System),
+- rl (Readline),
+- validator,
+- chalk,
+- yargs
+
+Node.js punya sebuah built-in module yang bernama HTTP, yang mengizinkan Node.js untuk transfer data melewati HTTP
+
+HTTP module dapat membuat sebuah server HTTP yang berinteraksi ke port server dan memberikan respons balik ke klien
+
+function penting : 
+createServer(function, (req, res) => {}) => function untuk membuat sebuah server HTTP
+writeHead() => function untuk mengembalikan status code (200 = sukses, 404 = tidak ditemukan), dan respons
+
+contoh :
+http.createServer((req, res) => {
+   res.writeHead(200, {
+      'Content-Type' : 'text/html'
+   }) -> server mengembalikan status code dan response yang berupa objek
+}).listen(3000) -> objek server berinteraksi dengan port 3000
+
+ExpressJS -> Cepat, tak terbatas, minimal Framework web untuk NodeJS
+   - Web App Framework yang dibuat di atas NodeJS
+   - Menyediakan antarmuka yang minimal untuk kakas yang diperlukan dalam membuat sebuah aplikasi web
+   - Membantu pengelolaan aliran data dari server ke aplikasi
+   - MERN, MEAN, MEVN Stack (MongoDB, ExpressJS, React | Angular | Vue, NodeJS)
+   - Diciptakan oleh TJ Holowaychuck pada tanggal 22 Mei 2010
+
+Fitur 
+   - Menangani request dengan berbagai metode HTTP dengan mudah (Routes)
+   - MVC (Model - View - Controller)
+   - Terintegrsi dengan "view" rendering engine, untuk mengelola template
+   - Middleware
+
+Tak Terbatas 
+   - Tidak ada aturan baku untuk membuat sesuatu
+   - Fleksibel
+   - Menentukan sendiri struktur aplikasi
+   - Bongkar pasang middleware
+
+Response dalam ExpressJS => apa yang dikembalikan oleh ExpressJS ketika kita menargetkan path / alamat tertentu.
+Request dalam ExpressJS => apa yang dikirimkan ke ExpressJS.   
+
+function penting ExpressJS :
+send() -> untuk mengirimkan string -> dapat memasukkan tag HTML
+set() -> untuk melakukan inisialisasi template engine
+get() -> untuk meregistrasi url dan mengembalikan halaman
+post() -> untuk mengambil data dari sebuah form yang ada di dalam suatu halaman
+write() -> untuk render string yang akan ditampilkan. contoh : "Hello World"
+use() -> untuk melakukan routing yang menggunakan middleware, ini digunakan ketika ingin membuat halaman erorr
+listen() -> untuk melakukan inisialisasi server yang menggunakan custom port
+
+Middleware adalah sebuah software yang menghubungkan software atau aplikasi lain.
+
+Middleware dapat digunakan dalam :
+   - Database
+   - Web Server
+   - Game Engine
+   - Web Application
+
+Fungsi Middleware di dalam ExpressJS yaitu sebuah fungsi yang memiliki akses ke object request (req), object response (res), dan fungsi middleware berikutnya (next)
+
+Fungsi Middleware di dalam ExpressJS memiliki berbagai macam jenis, yaitu :
+   - User-defined middleware
+      - Application-level middleware
+      - Router-level middleware
+      - Error-handling middleware
+   - Built-in middleware
+   - Third-party middleware
+
+modules ExpressJS :
+- express-session
+- cookie-parser
+- express-ejs-layout
+- express-validator
+
+MongoDB ->hu(mongo)us Database
+
+MongoDB adalah sebuah database yang berbasis dokumen yang memiliki skalabilitas dan flexibiltas yang kita inginkan dan juga memiliki fitur query dan indexing yang kita butuhkan.
+
+Database berbasis dokumen adalah salah satu tipe dari NoSQL Database
+
+NoSQL Database
+   - Not Only SQL
+   - Schemaless / Flexible Schema
+   - Denormalization
+   - Non-relational Database
+   - Unstructured, semi-structured, structured data
+
+Tipe NoSQL Database
+   - Key-value store
+      - Redis
+   - Document Based
+      - MongoDB, CouchDB
+   - Column-oriented Database
+      - HBase, Cassandra
+   - Graph Database
+      - Neo4J
+
+Kenapa MongoDB ? 
+   - JSON (BSON)
+   - JavaScript
+   - MERN, MEVN, MEAN
+
+Method penting di MongoDB :
+   - insertOne({obj}) -> untuk memasukkan suatu data
+   - insertMany({obj, obj}) -> untuk memasukkan banyak data
+   - updateOne({obj, obj}) -> untuk memasukkan banyak data
+   - updateMany({obj, obj}) -> untuk memasukkan banyak data
+   - deleteOne({obj}) -> untuk menghapus suatu data
+   - deleteMany({obj}) -> untuk menghapus banyak data
+   - objectID() -> untuk menangkap _id yg dimiliki oleh suatu data
