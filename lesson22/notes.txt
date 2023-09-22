@@ -192,3 +192,12 @@ Kenapa MongoDB ?
    - JSON (BSON)
    - JavaScript
    - MERN, MEVN, MEAN
+
+Method penting di MongoDB :
+   - insertOne({obj}) -> untuk memasukkan suatu data
+   - insertMany({obj, obj}) -> untuk memasukkan banyak data
+   - updateOne({obj, obj}) -> untuk memasukkan banyak data
+   - updateMany({obj, obj}) -> untuk memasukkan banyak data
+   - deleteOne({obj}) -> untuk menghapus suatu data
+   - deleteMany({obj}) -> untuk menghapus banyak data
+   - objectID() -> untuk menangkap _id yg dimiliki oleh suatu data
